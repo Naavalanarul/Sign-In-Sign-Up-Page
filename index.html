@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+<div class="auth-container">
+    <button class="toggle-btn" id="toggleBtn">Switch to Sign Up</button>
+    <form id="signInForm">
+        <h2 style="margin:0 0 0.5em 0;">Sign In</h2>
+        <input type="text" id="signin-user" placeholder="Username" required>
+        <input type="password" id="signin-pass" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+        <div class="msg" id="signin-msg"></div>
+    </form>
+    <form id="signUpForm" style="display:none;">
+        <h2 style="margin:0 0 0.5em 0;">Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="email" id="signup-email" placeholder="Email address" required>
+        <input type="password" id="signup-pass" placeholder="Password" required>
+        <input type="password" id="signup-pass2" placeholder="Confirm Password" required>
+        <div class="input-group">
+            <div style="display:flex;align-items:center;gap:0.2em;">
+                <span style="font-size:1.1em;"></span>
+                <input type="text" id="country-code" placeholder="+ Code" maxlength="3" pattern="[0-9]{1,3}" style="width:60px;" required>
+            </div>
+            <input type="tel" id="signup-mobile" placeholder="Mobile number" pattern="[0-9]{7,15}" required style="flex:1;">
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="msg" id="signup-msg"></div>
+    </form>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
